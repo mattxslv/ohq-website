@@ -1,6 +1,6 @@
-# OHQ - Once Headquarters 🎉
+# OHQ - Once HQ 🎉
 
-Welcome to **OHQ (Once Headquarters)** - the ultimate community hub for TWICE fans (ONCE) to celebrate, connect, and create unforgettable memories together!
+Welcome to **OHQ (Once HQ)** - the ultimate community hub for TWICE fans (ONCE) to celebrate, connect, and create unforgettable memories together!
 
 ## About OHQ
 
