@@ -264,9 +264,21 @@ export default function TicketsPage() {
             <div>
               <h4 className="font-bold mb-4 text-lg">Connect With Us</h4>
               <ul className={`space-y-2 ${isDarkMode ? 'text-slate-400' : 'text-gray-400'}`}>
-                <li>Facebook: @OnceHQ</li>
-                <li>Twitter: @OnceHQPH</li>
-                <li>Discord: OHQ Community</li>
+                <li>
+                  <a href="https://www.facebook.com/OnceHeadquarters" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                    Facebook: @OnceHeadquarters
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/oncehq" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                    Twitter/X: @oncehq
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/oncehq/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                    Instagram: @oncehq
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

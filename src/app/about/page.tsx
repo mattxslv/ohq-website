@@ -290,6 +290,55 @@ export default function About() {
           <p className={`text-center mt-8 ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>More partners coming soon!</p>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className={`${isDarkMode ? 'bg-slate-950' : 'bg-slate-900'} text-white py-12`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-amber-400 to-slate-400 bg-clip-text text-transparent">
+                Once HQ
+              </h3>
+              <p className="text-slate-400">
+                Your home for TWICE celebrations and community since 2018
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4 text-lg">Quick Links</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><Link href="/about" className="hover:text-amber-400 transition-colors">About Us</Link></li>
+                <li><Link href="/events" className="hover:text-amber-400 transition-colors">Events</Link></li>
+                <li><Link href="/media" className="hover:text-amber-400 transition-colors">Media</Link></li>
+                <li><Link href="/faq" className="hover:text-amber-400 transition-colors">FAQ</Link></li>
+                <li><Link href="/contact" className="hover:text-amber-400 transition-colors">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-4 text-lg">Connect With Us</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li>
+                  <a href="https://www.facebook.com/OnceHeadquarters" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                    Facebook: @OnceHeadquarters
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/oncehq" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                    Twitter/X: @oncehq
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/oncehq/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
+                    Instagram: @oncehq
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-400">
+            <p>&copy; 2024 Once HQ. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
