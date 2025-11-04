@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, MessageCircle, Mail, Phone, Sparkles, Moon, Sun } from "lucide-react";
+import { Facebook, Twitter, MessageCircle, Mail, Phone, Sparkles, Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, MapPin, Users, ExternalLink, Ticket, Moon, Sun } from "lucide-react";
+import { Calendar, MapPin, Users, ExternalLink, Ticket, Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function TicketsPage() {

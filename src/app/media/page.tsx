@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Youtube, Moon, Sun } from "lucide-react";
+import { Youtube, Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Media() {

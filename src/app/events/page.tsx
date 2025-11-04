@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, Gift, Music, Clock, Moon, Sun } from "lucide-react";
+import { Calendar, Gift, Music, Clock, Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Events() {
@@ -13,6 +13,8 @@ export default function Events() {
     }
     return true;
   });
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleDarkMode = () => {
     const newMode = !isDarkMode;
@@ -69,7 +71,52 @@ export default function Events() {
                 Contact
               </Link>
             </div>
+
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden flex items-center space-x-2">
+              <button
+                onClick={toggleDarkMode}
+                className={`p-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'} rounded-lg transition`}
+                aria-label="Toggle dark mode"
+              >
+                {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              </button>
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className={`p-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'} rounded-lg transition`}
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="lg:hidden pb-4 space-y-2">
+              <Link href="/" className={`block px-4 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'} rounded-lg transition font-medium`} onClick={() => setIsMenuOpen(false)}>
+                Home
+              </Link>
+              <Link href="/about" className={`block px-4 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'} rounded-lg transition font-medium`} onClick={() => setIsMenuOpen(false)}>
+                About
+              </Link>
+              <Link href="/events" className={`block px-4 py-2 ${isDarkMode ? 'text-white bg-slate-800' : 'text-slate-800 bg-slate-100'} rounded-lg font-medium`} onClick={() => setIsMenuOpen(false)}>
+                Events
+              </Link>
+              <Link href="/tickets" className={`block px-4 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'} rounded-lg transition font-medium`} onClick={() => setIsMenuOpen(false)}>
+                Tickets
+              </Link>
+              <Link href="/media" className={`block px-4 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'} rounded-lg transition font-medium`} onClick={() => setIsMenuOpen(false)}>
+                Media
+              </Link>
+              <Link href="/faq" className={`block px-4 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100'} rounded-lg transition font-medium`} onClick={() => setIsMenuOpen(false)}>
+                FAQ
+              </Link>
+              <Link href="/contact" className={`block px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition font-medium text-center`} onClick={() => setIsMenuOpen(false)}>
+                Contact
+              </Link>
+            </div>
+          )}
         </div>
       </nav>
 
