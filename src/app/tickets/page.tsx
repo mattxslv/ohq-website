@@ -97,7 +97,54 @@ export default function Tickets() {
                 Contact
               </Link>
             </div>
+
+            {/* Mobile menu button */}
+            <div className="lg:hidden flex items-center gap-2">
+              <button
+                onClick={toggleDarkMode}
+                className={`p-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-gray-700 hover:text-blue-900 hover:bg-blue-50'} rounded-lg transition`}
+                aria-label="Toggle dark mode"
+              >
+                {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              </button>
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className={`p-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-gray-700 hover:text-blue-900 hover:bg-blue-50'} rounded-lg transition`}
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile menu */}
+          {isMenuOpen && (
+            <div className={`lg:hidden ${isDarkMode ? 'bg-slate-900/95 border-slate-700' : 'bg-white/95 border-gray-200'} border-t backdrop-blur-sm`}>
+              <div className="px-4 py-4 space-y-2">
+                <Link href="/" onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-gray-700 hover:text-blue-900 hover:bg-blue-50'} rounded-lg transition font-medium`}>
+                  Home
+                </Link>
+                <Link href="/about" onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-gray-700 hover:text-blue-900 hover:bg-blue-50'} rounded-lg transition font-medium`}>
+                  About
+                </Link>
+                <Link href="/events" onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-gray-700 hover:text-blue-900 hover:bg-blue-50'} rounded-lg transition font-medium`}>
+                  Events
+                </Link>
+                <Link href="/tickets" onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 ${isDarkMode ? 'text-white bg-slate-800' : 'text-blue-900 bg-blue-50'} rounded-lg font-medium`}>
+                  Tickets
+                </Link>
+                <Link href="/media" onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-gray-700 hover:text-blue-900 hover:bg-blue-50'} rounded-lg transition font-medium`}>
+                  Media
+                </Link>
+                <Link href="/faq" onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 ${isDarkMode ? 'text-slate-300 hover:text-white hover:bg-slate-800' : 'text-gray-700 hover:text-blue-900 hover:bg-blue-50'} rounded-lg transition font-medium`}>
+                  FAQ
+                </Link>
+                <Link href="/contact" onClick={() => setIsMenuOpen(false)} className={`block px-4 py-2 ${isDarkMode ? 'bg-amber-600 hover:bg-amber-700' : 'bg-blue-900 hover:bg-blue-800'} text-white rounded-lg transition font-medium shadow-md text-center`}>
+                  Contact
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
