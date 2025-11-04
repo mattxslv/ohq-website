@@ -14,6 +14,8 @@ export default function FAQ() {
     return true;
   });
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleDarkMode = () => {
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);

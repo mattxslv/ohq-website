@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Calendar, MapPin, Users, ExternalLink, Ticket, Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
 
-export default function TicketsPage() {
+export default function Tickets() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('darkMode');
@@ -13,6 +13,8 @@ export default function TicketsPage() {
     }
     return true;
   });
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleDarkMode = () => {
     const newMode = !isDarkMode;
